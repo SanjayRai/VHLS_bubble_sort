@@ -4,9 +4,14 @@
 #include "bubble_sort.h"
 #include "ap_fixed.h"
 //
+double getCPUTime();
 
 int main()
 {
+
+  double startTime;
+  double endTime;
+  double ElapsedTime;
 
     sorter_data_t data[NUM_ELE];
     sorter_data_t out_data[NUM_ELE];
@@ -54,11 +59,17 @@ int main()
             }
         }
         //my_bubble_sorter.bubble_sort(data, out_data);
+        startTime = getCPUTime();
+        //-----------------------------------------------
         bubble_sort_wrapper(data, out_data);
         printf("In ascending order: \n");
+        //-----------------------------------------------
+        endTime = getCPUTime();
+        ElapsedTime = (endTime - startTime);
         for(int i=0;i<NUM_ELE;++i)
              printf("%f :: %f \n",(float)orig_data[i], (float)out_data[i]);
              printf("\n");
+        printf (" Elapsed Time for algorithm = %1f sec\n", ElapsedTime);
     }
     return 0;
 }

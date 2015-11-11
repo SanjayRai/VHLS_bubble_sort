@@ -1,1 +1,1 @@
-g++  -g ../src/bubble_sort_wrapper.cpp ../src/tb_bubble_sort.cpp -o tb_bubble_sort.exe -I/home/applications/Xilinx/Vivado_HLS/2015.3/include
+g++  -g ../src/getCPUTime.cpp ../src/bubble_sort_wrapper.cpp ../src/tb_bubble_sort.cpp -o tb_bubble_sort.exe  -lm -lrt -I/home/applications/Xilinx/Vivado_HLS/2015.3/include
